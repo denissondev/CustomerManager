@@ -30,7 +30,7 @@ public class CustomerController : ControllerBase
             Name = System.Web.HttpUtility.HtmlEncode(request.Name),
             Email = System.Web.HttpUtility.HtmlEncode(request.Email),
             Password = BCrypt.Net.BCrypt.HashPassword(request.Password), 
-            Role = "Default"  // Sempre será um usuário comum por padrão
+            Role = "Default"  // Somente Admins poderão promover.
         };
 
         _context.Customers.Add(customer);
@@ -89,10 +89,9 @@ public class CustomerController : ControllerBase
         return Ok(new { message = "Customer updated successfully!" });
     }
 
-
     [HttpDelete("{id}")]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete(Guid id)
     {
         var customer = await _context.Customers.FindAsync(id);
         if (customer == null) return NotFound("Customer not found.");

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SaipherCustomerManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c45bbf9e067f96b69767758ec22b4fa7ebc5fde")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b22ab24fca621f2d573262d8bbf03ef461df6fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("SaipherCustomerManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SaipherCustomerManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

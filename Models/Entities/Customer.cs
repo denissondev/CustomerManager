@@ -7,5 +7,5 @@ public class Customer
     public string? Name { get; set; }
     public string? Email { get; set; }
     public string? Password { get; set; }
-    public string Role { get; set; } = "Default"; // "Admin" ou "Default".
+    public string? Role { get; set; }
 }

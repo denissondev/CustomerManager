@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using SaipherCustomerManager;
 using SaipherCustomerManager.Helpers;
 using System.Text;
+using SaipherCustomerManager.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<JwtService>();
+builder.Services.AddScoped<CustomerService>();
 
 builder.Services.AddControllers();
 

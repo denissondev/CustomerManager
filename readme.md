@@ -130,3 +130,149 @@ Comentários que se iniciem com `*` tratam-se de comentários para serem feitos 
 
     ### Serviços externos
     Criei um pequeno módulo com uma aplicação simples de console que retorna alguns tipos de chave. A criação foi baseada na necessidade de criação de guid e hash fixos para as migrations além de ser utilizada também para criar uma chave segura para o JWT. Esse módulo pode ser acessado [Clicando Aqui](http://github.com/denissondev/KeyGenerator).
+
+    
+## Rotas disponíveis
+
+### Registrar um Novo Cliente
+
+- **Método:** `POST`
+- **Rota:** `/api/customers/register`
+- **Autenticação:** Não requer autenticação.
+- **Corpo da Requisição:**
+
+  ```json
+  {
+    "name": "João Silva",
+    "email": "joao.silva@example.com",
+    "password": "senhaSegura123"
+  }
+
+- Resposta de Sucesso:
+
+    ```json
+    Copy
+    {
+        "message": "Customer registered successfully!"
+    }
+    ```
+- Resposta de Erro:
+
+    ```json
+    Copy
+    {
+        "error": "Email already registered."
+    }
+    ```
+
+### Listar Todos os Clientes
+Retorna uma lista de todos os clientes registrados.
+
+- **Método:** `GET`
+- **Rota:** `/api/customers`
+- **Autenticação:** Requer autenticação.
+- **Resposta de Sucesso:**
+
+    ```json 
+    [
+            {
+        "id": "d3b4f5e6-7a8b-4c9d-8e1f-2a3b4c5d6e7f",
+        "name": "Admin",
+        "email": "admin@Saipher.com.br",
+        "role": "Admin"
+        },
+        {
+            "id": "80752c0c-4672-492d-b4c6-db5db5dc4366",
+            "name": "Denisson Silva",
+            "email": "denisson@Saipher.com.br",
+            "role": "Admin"
+        }
+    ]
+    ```
+
+### Obter Cliente por ID
+Retorna os detalhes de um cliente específico com base no ID.
+
+- **Método:** `GET`
+- **Rota:** `/api/customers/{id}`
+- **Autenticação:** Requer autenticação.
+- **Parâmetros de URL:**
+    -   `id`: ID do cliente.
+- **Resposta de Sucesso:**
+
+    ```json 
+    [
+        {
+            "id": "80752c0c-4672-492d-b4c6-db5db5dc4366",
+            "name": "Denisson Silva",
+            "email": "denisson@Saipher.com.br",
+            "role": "Admin"
+        }
+    ]
+    ```
+
+- **Resposta de Erro:**
+    ```json 
+    [
+        {
+            "error": "Customer not found."
+        }
+    ]
+    ```
+### Atualizar Cliente
+Atualiza as informações de um cliente existente.
+
+- **Método:** `PUT`
+- **Rota:** `/api/customers/{id}`
+- **Autenticação:** Requer autenticação e permissão de administrador.
+- **Parâmetros de URL:** 
+    -   `id`: ID do cliente.
+- **Corpo da requisição** (é possível passar somente a propriedade a ser alterada):
+    ```json 
+    {
+        "password": "novaSenhaSegura123",
+        "role": "Default"
+    }
+    ```
+
+- **Resposta de Sucesso:**
+    ```json 
+    {
+        "message": "Customer updated successfully!"
+    }
+    ```
+
+- **Resposta de Erro:**
+    ```json 
+    {
+        "error": "Customer not found."
+    }
+    ```
+### Excluir Cliente
+Exclui um cliente do sistema.
+
+
+- **Método:** `DELETE`
+- **Rota:** `/api/customers/{id}`
+- **Autenticação:** Requer autenticação e permissão de administrador..
+- **Parâmetros de URL:** 
+    -   `id`: ID do cliente.
+- **Resposta de Sucesso:**
+    ```json 
+    {
+        "message": "Customer deleted  successfully!"
+    }
+    ```
+
+- **Resposta de Erro:**
+    ```json 
+    {
+        "error": "Customer not found."
+    }
+
+### Considerações de Segurança
+- **Proteção contra XSS:** Todas as entradas de dados são sanitizadas para prevenir ataques de Cross-Site Scripting (XSS).
+
+- **Hash de Senhas:** As senhas dos clientes são armazenadas utilizando o algoritmo de hash BCrypt.
+
+- **Controle de Acesso:** Apenas administradores podem excluir e atualizar clientes.

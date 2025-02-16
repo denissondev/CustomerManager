@@ -40,7 +40,7 @@ public class CustomerController : ControllerBase
     }
 
     [HttpGet]
-    [AllowAnonymous]
+    [Authorize]
     public async Task<IActionResult> GetAll()
     {
         var customers = await _context.Customers.ToListAsync();
@@ -56,7 +56,7 @@ public class CustomerController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    [AllowAnonymous]
+    [Authorize]
     public async Task<IActionResult> GetById(int id)
     {
         var customer = await _context.Customers.FindAsync(id);
@@ -75,6 +75,7 @@ public class CustomerController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Update(Guid id, [FromBody] Customer updatedCustomer)
     {
         var customer = await _context.Customers.FindAsync(id);

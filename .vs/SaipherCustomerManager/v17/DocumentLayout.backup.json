@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jose.denisson\\Desktop\\SaipherCustomerManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE315043-BACB-B20A-A9F3-8B0D95566C7D}|SaipherCustomerManager.csproj|c:\\users\\jose.denisson\\desktop\\saiphercustomermanager\\models\\appdbcontext||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FE315043-BACB-B20A-A9F3-8B0D95566C7D}|SaipherCustomerManager.csproj|solutionrelative:models\\appdbcontext||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext",
+              "DocumentMoniker": "C:\\Users\\jose.denisson\\Desktop\\SaipherCustomerManager\\Models\\AppDbContext",
+              "RelativeDocumentMoniker": "Models\\AppDbContext",
+              "ToolTip": "C:\\Users\\jose.denisson\\Desktop\\SaipherCustomerManager\\Models\\AppDbContext",
+              "RelativeToolTip": "Models\\AppDbContext",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-16T16:14:05.46Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

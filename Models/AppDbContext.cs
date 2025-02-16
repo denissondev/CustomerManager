@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace SaipherCustomerManager
 {
     public class AppDbContext : DbContext

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\jose.denisson\\Desktop\\SaipherCustomerManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE315043-BACB-B20A-A9F3-8B0D95566C7D}|SaipherCustomerManager.csproj|c:\\users\\jose.denisson\\desktop\\saiphercustomermanager\\models\\appdbcontext||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FE315043-BACB-B20A-A9F3-8B0D95566C7D}|SaipherCustomerManager.csproj|solutionrelative:models\\appdbcontext||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{FE315043-BACB-B20A-A9F3-8B0D95566C7D}|SaipherCustomerManager.csproj|c:\\users\\jose.denisson\\desktop\\saiphercustomermanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE315043-BACB-B20A-A9F3-8B0D95566C7D}|SaipherCustomerManager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AppDbContext",
-              "DocumentMoniker": "C:\\Users\\jose.denisson\\Desktop\\SaipherCustomerManager\\Models\\AppDbContext",
-              "RelativeDocumentMoniker": "Models\\AppDbContext",
-              "ToolTip": "C:\\Users\\jose.denisson\\Desktop\\SaipherCustomerManager\\Models\\AppDbContext",
-              "RelativeToolTip": "Models\\AppDbContext",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-16T16:14:05.46Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jose.denisson\\Desktop\\SaipherCustomerManager\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jose.denisson\\Desktop\\SaipherCustomerManager\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T17:19:51.253Z",
               "EditorCaption": ""
             }
           ]

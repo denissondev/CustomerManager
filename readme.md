@@ -1,0 +1,88 @@
+# Teste Prático Saipher
+
+## Sumário
+- [Objetivo](#objetivo)
+- [Requisitos do Sistema](#requisitos-do-sistema)
+    - [Requisitos Funcionais](#requisitos-funcionais)
+    - [Requisitos Não Funcionais](#requisitos-não-funcionais)
+- [Critério de Avaliação](#critérios-de-avaliação)
+
+## Objetivo
+
+Avaliar as habilidades de desenvolvimento do candidato na construção de um sistema simples de gerenciamento de usuários CRUD utilizando .NET Core para a API e Angular para a aplicação cliente web.
+
+## Requisitos do Sistema
+
+-  Backend API em .NET Core:
+    - Autenticação e Autorização:
+    - Endpoints:
+        - POST /api/auth/login Autenticação de usuário.
+        - GET /api/users Listar todos os usuários (protegido por autenticação).
+        - POST /api/users Adicionar um novo usuário (protegido por autenticação).
+        - PUT /api/users/{id} Atualizar um usuário existente (protegido por
+autenticação).
+        - GET /api/users/{id} Obter detalhes de um usuário específico (protegido por
+autenticação).
+        - DELETE /api/users/{id} Deletar um usuário (opcional e protegido por
+autenticação).
+
+    - Banco de Dados:
+        - Usar Entity Framework Core para interação com o banco de dados.
+        - Criar uma tabela de usuários com colunas para ID, Nome, Email, Senha
+(hash).
+
+- Frontend (Aplicação Cliente) em Angular:
+    - Tela de Login:
+        - Formulário com campos para email e senha.
+        - Validação de formulário.
+        - Chamada ao endpoint de login da API.
+        - Redirecionamento para a tela de gerenciamento de usuários em caso de sucesso.
+    - Tela de Gerenciamento de Usuários:
+        - Grid de listagem de usuários com colunas para Nome e Email.
+        - Botão "Adicionar Usuário" para abrir um formulário de criação de usuário.
+        - Opção para editar um usuário existente (ao clicar em uma linha do grid ou
+um botão de editar).
+        - Validação de formulário ao adicionar ou editar usuários.
+        - Chamada aos endpoints apropriados da API para listar, adicionar e editar usuários.
+        - Proteção de rota para garantir que apenas usuários autenticados possam acessar.
+
+### Requisitos Funcionais:
+
+- Autenticação:
+    - Usuários devem poder se autenticar usando email e senha.
+    - Após o login bem-sucedido, um token JWT deve ser armazenado no cliente e usado para autenticação em chamadas subsequentes.
+- Gerenciamento de Usuários:
+    - Listar todos os usuários em um grid na tela de gerenciamento.
+    - Permitir adição de novos usuários através de um formulário.
+    - Permitir edição de usuários existentes através de um formulário.
+    - O sistema deve validar que emails são únicos e senhas são suficientemente seguras.
+
+### Requisitos Não funcionais
+- Qualidade de Código:
+    - Seguir boas práticas de codificação, incluindo a utilização de princípios SOLID e padrões de design apropriados.
+    - Escrever código limpo e comentado.
+- Performance e Segurança:
+    - Garantir que a aplicação seja responsiva e tenha um bom desempenho.
+    - Implementar práticas de segurança para proteger contra ataques comuns (e.g., SQL Injection, XSS).
+- Testes:
+    - Escrever testes unitários para componentes críticos do frontend e backend.
+    - Testar a aplicação manualmente para garantir que todas as funcionalidades estão operando corretamente.
+
+## Critérios de Avaliação
+
+- Compromisso:
+    - Independente de ter terminado ou não, entregue.
+- Funcionalidade:
+    - O sistema atende a todos os requisitos funcionais especificados?
+    - A autenticação e autorização estão implementadas corretamente?
+- Qualidade do Código:
+    - O código segue boas práticas de desenvolvimento?
+    - Está bem organizado e fácil de entender?
+- Interface de Usuário:
+    - A UI é intuitiva e fácil de usar?
+    - As telas são responsivas e visualmente agradáveis?
+- Performance e Segurança:
+    - A aplicação tem um bom desempenho?
+    - Foram implementadas medidas de segurança adequadas?
+- Testes (Bônus):
+    - Existem testes unitários e eles cobrem as partes críticas do código?

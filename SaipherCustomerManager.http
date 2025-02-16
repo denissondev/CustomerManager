@@ -1,0 +1,6 @@
+@SaipherCustomerManager_HostAddress = http://localhost:5274
+
+GET {{SaipherCustomerManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

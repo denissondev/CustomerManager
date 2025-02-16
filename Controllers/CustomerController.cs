@@ -44,7 +44,15 @@ public class CustomerController : ControllerBase
     public async Task<IActionResult> GetAll()
     {
         var customers = await _context.Customers.ToListAsync();
-        return Ok(customers);
+        var customerDtos = customers.Select(c => new CustomerDto
+        {
+            Id = c.Id,
+            Name = c.Name,
+            Email = c.Email,
+            Role = c.Role
+        }).ToList();
+
+        return Ok(customerDtos);
     }
 
     [HttpGet("{id}")]

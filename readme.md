@@ -86,3 +86,47 @@ um botão de editar).
     - Foram implementadas medidas de segurança adequadas?
 - Testes (Bônus):
     - Existem testes unitários e eles cobrem as partes críticas do código?
+
+    
+## Sobre o Desenvolvimento
+
+### Estrutura do Projeto
+Utilizei o padrão MVC para criação da API visto que incluiremos também um módulo de View mais na frente com o Angular. Além da estrutura padrão do MVC criei as pastas `Services`, que irão armazenar nossos serviços/métodos de acesso e a pasta `Helpers` para armazenar utilitários (No inicio da aplicação só consigo lembrar da classe de configuração do JWT, mas geralmente, aparecem mais no decorrer do desenvolvimento).
+
+### Banco de Dados
+Apesar de o banco de dados padrão da Saipher ser SQL Server, pela simplicidade e similidaridade optei pelo SQLite. Como ORM, seguiremos como pede o teste utilizando o Entity Framework.
+
+### Estrutura de comentários
+Comentários que se iniciem com `*` tratam-se de comentários para serem feitos na entrevista de apresentação do projeto e não de comentários técnicos, ou seja, comentários que visam lembrar o que pensei enquanto desenvolvia. Dessa forma, peço que na avaliação sejam ignorados os comentários que se iniciarem com `*`.
+
+### Ferramentas Utilizadas (pacotes)
+
+- Banco de Dados e EF
+
+    O Banco de dados será o SQLite, manipulado pelo EntityFramework.
+
+    Instalação:
+    ```
+    dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+    dotnet add package Microsoft.EntityFrameworkCore.Design
+    ```
+- JWT
+
+    Para autenticação e autorização de usuários
+
+    Instalação: 
+    ``` bash
+    dotnet add package System.IdentityModel.Tokens.Jwt
+    dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 8.0.10
+    ```
+- BCrypt
+
+    O BCrypt será utilizado na criação e tradução de Hash visando manter o tráfego de dados sensíveis seguro.
+
+    Instalação: 
+    ``` bash
+    dotnet add package BCrypt.Net-Next --version 4.0.3
+    ```
+
+    ### Serviços externos
+    Criei um pequeno módulo com uma aplicação simples de console que retorna alguns tipos de chave. A criação foi baseada na necessidade de criação de guid e hash fixos para as migrations além de ser utilziada também para criar uma chave segura para o JWT. Esse módulo pode ser acessado [Clicando Aqui](http://github.com/denissondev/KeyGenerator).

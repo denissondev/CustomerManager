@@ -129,4 +129,4 @@ Comentários que se iniciem com `*` tratam-se de comentários para serem feitos 
     ```
 
     ### Serviços externos
-    Criei um pequeno módulo com uma aplicação simples de console que retorna alguns tipos de chave. A criação foi baseada na necessidade de criação de guid e hash fixos para as migrations além de ser utilziada também para criar uma chave segura para o JWT. Esse módulo pode ser acessado [Clicando Aqui](http://github.com/denissondev/KeyGenerator).
+    Criei um pequeno módulo com uma aplicação simples de console que retorna alguns tipos de chave. A criação foi baseada na necessidade de criação de guid e hash fixos para as migrations além de ser utilizada também para criar uma chave segura para o JWT. Esse módulo pode ser acessado [Clicando Aqui](http://github.com/denissondev/KeyGenerator).

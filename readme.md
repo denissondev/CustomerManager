@@ -1,5 +1,4 @@
-# Teste Prático Saipher
-
+# Gerenciador de Clientes
 ## Sumário
 - [Objetivo](#objetivo)
 - [Requisitos do Sistema](#requisitos-do-sistema)
@@ -94,7 +93,7 @@ um botão de editar).
 Utilizei o padrão MVC para criação da API visto que incluiremos também um módulo de View mais na frente com o Angular. Além da estrutura padrão do MVC criei as pastas `Services`, que irão armazenar nossos serviços/métodos de acesso e a pasta `Helpers` para armazenar utilitários (No inicio da aplicação só consigo lembrar da classe de configuração do JWT, mas geralmente, aparecem mais no decorrer do desenvolvimento).
 
 ### Banco de Dados
-Apesar de o banco de dados padrão da Saipher ser SQL Server, pela simplicidade e similidaridade optei pelo SQLite. Como ORM, seguiremos como pede o teste utilizando o Entity Framework.
+Apesar de o banco de dados padrão da avaliadora ser SQL Server, pela simplicidade e similidaridade optei pelo SQLite. Como ORM, seguiremos como pede o teste utilizando o Entity Framework.
 
 ### Estrutura de comentários
 Comentários que se iniciem com `*` tratam-se de comentários para serem feitos na entrevista de apresentação do projeto e não de comentários técnicos, ou seja, comentários que visam lembrar o que pensei enquanto desenvolvia. Dessa forma, peço que na avaliação sejam ignorados os comentários que se iniciarem com `*`.
@@ -178,13 +177,13 @@ Retorna uma lista de todos os clientes registrados.
             {
         "id": "d3b4f5e6-7a8b-4c9d-8e1f-2a3b4c5d6e7f",
         "name": "Admin",
-        "email": "admin@Saipher.com.br",
+        "email": "admin@teste.com.br",
         "role": "Admin"
         },
         {
             "id": "80752c0c-4672-492d-b4c6-db5db5dc4366",
             "name": "Denisson Silva",
-            "email": "denisson@Saipher.com.br",
+            "email": "denisson@teste.com.br",
             "role": "Admin"
         }
     ]
@@ -205,7 +204,7 @@ Retorna os detalhes de um cliente específico com base no ID.
         {
             "id": "80752c0c-4672-492d-b4c6-db5db5dc4366",
             "name": "Denisson Silva",
-            "email": "denisson@Saipher.com.br",
+            "email": "denisson@teste.com.br",
             "role": "Admin"
         }
     ]
